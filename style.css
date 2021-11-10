@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: #484848;
+  color: #fff;
+  /* 센터로 정렬하는 flex */
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#카운트버튼 {
+  width: 5vw;
+  height: 10vh;
+}
+
+#container {
+  width: 85vw;
+  height: 95vh;
+  background-color: #212121;
+}
+
+#Routine_container {
+  display: flex;
+  flex-direction: row;
+}
+
+#Routine_container .Routine {
+  border: black solid 5px;
+  background-color: #000000;
+  width: 20%;
+  height: 15%;
+}
+
+#Routine_container .count {
+  background-color: #ffffff;
+  font-size: 20px;
+  width: 100%;
+}
+
+#container #set {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  color: wheat;
+}
+
+#aaa {
+  width: 20%;
+}
+
+#set .세트수관리 {
+  background-color: rgb(22, 22, 155);
+  width: 100%;
+  height: 35%;
+}
+
+#set .누적횟수관리 {
+  background-color: #3b4690;
+  width: 100%;
+  height: 65%;
+}

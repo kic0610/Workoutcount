@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>무제</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <input id="카운트버튼" type="button" value="+1set">
+
+    <section id="container">
+      <div id="Routine_container">
+          <div class="Routine list1">
+            <li>Push-up</li>
+            <input type="text" value="13" class="count count1"></input>
+          </div>
+          <div class="Routine list2">
+            <li>squat</li>
+            <input type="text" value="20" class="count count2"></input>
+          </div>
+          <div class="Routine list3">
+            <li>Plank</li>
+            <input type="text" value="35" class="count count3"></input>
+          </div>
+          <div class="Routine list4">
+            <li>Chin-up</li>
+            <input type="text" value="13" class="count count4"></input>
+          </div>
+          <div class="Routine list5">
+            <li>sit-up</li>
+            <input type="text" value="12" class="count count5"></input>
+          </div>
+      </div>
+
+      <div id="set">
+            <div id="aaa">
+            <div class="세트수관리 세트수1">0set</div>
+            <div class="누적횟수관리 누적횟수1"></div></div>
+
+            <div id="aaa">
+            <div class="세트수관리 세트수2">0set</div>
+            <div class="누적횟수관리 누적횟수2"></div></div>
+
+            <div id="aaa">
+            <div class="세트수관리 세트수3">0set</div>
+            <div class="누적횟수관리 누적횟수3"></div></div>
+
+            <div id="aaa">
+            <div class="세트수관리 세트수4">0set</div>
+            <div class="누적횟수관리 누적횟수4"></div></div>
+
+            <div id="aaa">
+            <div class="세트수관리 세트수5">0set</div>
+            <div class="누적횟수관리 누적횟수5"></div>
+            </div>
+            
+      </div>
+
+      
+    </section>
+
+    <input id="카운트버튼" type="button" value="+1set">
+    <script>
+      let count_Btn = document.querySelector('#카운트버튼');
+      let count = document.querySelector('.count');
+      let 세트수관리 = document.querySelector('.세트수관리');
+
+
+      let Q = 1;
+
+      count_Btn.addEventListener('click', function(){
+        for (let i = 1; i < 6; i++) {
+          document.querySelector(`.세트수${i}`).textContent = `${Q}set`;
+          document.querySelector(`.누적횟수${i}`).textContent = document.querySelector(`.count${i}`).value * Q;
+        }
+        Q++;
+      });
+      
+    </script>
+  </body>
+</html>
